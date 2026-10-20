@@ -1,22 +1,15 @@
 #include <stdio.h>
 
-int main(){
+main()
+{
+    int n, valor;
+    printf("Digite o valor: ");
+    scanf("%d", &valor);
+    n = 1;
 
-    float num1, num2;
-
-    printf("Digite o primeiro valor: ");
-    scanf("%f", &num1);
-
-    printf("Digite o segundo valor: ");
-    scanf("%f", &num2);
-
-    if(num1 > num2){
-        printf("O maior numero eh: %2.f", num1);
-    }else if (num2 > num1){
-        printf("O maior valor eh: %f", num2);
-    }else{
-        printf("Os dois valore sao iguais.");
+    while (n <= 10)
+    {
+        printf("%d * %2d = %2d\n", valor, n, valor * n);
+        n = n + 1;
     }
-
-    return 0;
 }
