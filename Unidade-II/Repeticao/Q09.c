@@ -3,24 +3,17 @@
 
 int main(){
 
-    int idade;
-    int maiores = 0;
-    int continuar;
-    
-    do
-    {
-        printf("Digite a idade: ");
-        scanf("%d", &idade);
-        printf("");
-        if(idade >= 18){
-            maiores++;
-        }
-        printf("Deseja continuar? (1 - sim) / (0 - nao): ");
-        scanf("%d", &continuar);
+    int inicio, i, fim, soma = 0;
+    printf("Digite o valor inicial: ");
+    scanf("%d", &inicio);
+    printf("Digite o valor final: ");
+    scanf("%d", &fim);
 
-    } while (continuar == 1);
-    printf("");
-    printf("Quantidade de pessoas maiores de 18 anos: %d", maiores);
-    printf("");
+    for (i = inicio; i <= fim; i++){
+        if (i % 2 == 0){
+            soma += i;
+        }
+    }
+    printf("Soma dos números pares: %d\n", soma);
     return 0;
 }
